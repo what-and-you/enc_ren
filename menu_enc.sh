@@ -54,20 +54,15 @@ while true; do
             chmod +x file2.sh
             ./file2.sh
             ;;
-        3)
+         3)
             clear
             echo -e "${CYAN}Memulai Enkripsi script bash/shell...${RESET}"
             sleep 1
-
-            # Cek apakah file3.sh ada sebelum dieksekusi
-            if [[ ! -f "file3.sh" ]]; then
-                echo -e "${RED}Error: file3.sh tidak ditemukan!${RESET}"
-                exit 1
-            fi
-
             chmod +x file3.sh
+            read -p "contoh penggunaan: /sdcard/contoh/p/nama_file.sh"
             ./file3.sh
             ;;
+            
         4) 
             clear
             echo -e "${RED}Keluar dari script...${RESET}"
