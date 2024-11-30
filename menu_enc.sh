@@ -29,7 +29,7 @@ show_menu() {
     echo -e "${CYAN}├────────────────────────────────────────────────────────────────┤${RESET}"
     echo -e "${WHITE}│ ${CYAN}1.${WHITE} Enkripsi script python v1                                   ${CYAN}│${RESET}"
     echo -e "${WHITE}│ ${CYAN}2.${WHITE} Enkripsi script python v2                                   ${CYAN}│${RESET}"
-    echo -e "${WHITE}│ ${CYAN}3.${WHITE} Enkripsi script bash/shell ${RED}(MASIH DALAM PERBAIKAN)         ${CYAN}│${RESET}"
+    echo -e "${WHITE}│ ${CYAN}3.${WHITE} Enkripsi script bash/shell ${RED}(MASIH DALAM PERBAIKAN)          ${CYAN}│${RESET}"
     echo -e "${WHITE}│ ${RED}4.${WHITE} Keluar                                                      ${CYAN}│${RESET}"
     echo -e "${CYAN}╰────────────────────────────────────────────────────────────────╯${RESET}"
     echo -n -e "${CYAN}Pilih menu (1/2/3): ${RESET}"
