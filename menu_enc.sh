@@ -43,15 +43,15 @@ while true; do
             clear
             echo -e "${CYAN}Memulai Enkripsi Tingkat Hard...${RESET}"
             sleep 1
-            chmod +x enc_ren.sh
-            ./enc_ren.sh
+            chmod +x file1.sh
+            ./file1.sh
             ;;
         2)
             clear
             echo -e "${CYAN}Memulai Enkripsi Tingkat Easy...${RESET}"
             sleep 1
-            chmod +x enc_ren2.sh
-            ./enc_ren2.sh
+            chmod +x file2.sh
+            ./file2.sh
             ;;
         3)
             clear
