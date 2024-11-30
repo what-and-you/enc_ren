@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Menampilkan prompt untuk input lokasi file
+clear
 echo "Masukkan lokasi script yang akan dienkripsi (contoh: /sdcard/script.sh): "
 read INPUT_FILE
 
@@ -44,3 +45,5 @@ EOF
 chmod +x "$OUTPUT_FILE"
 
 echo "File encrypted successfully: $OUTPUT_FILE"
+
+read -p "pencet enter untuk kembali ke menu awal"
