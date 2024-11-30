@@ -1,47 +1,53 @@
-# Deskripsi Script Enkripsi Bash
+# 🚀 **Script Enkripsi Bash** - Sederhana, Kreatif, dan Efektif! 🔒
 
-Selamat datang di repositori script enkripsi Bash! Script ini menyediakan dua teknik enkripsi yang terlihat rumit namun sebenarnya menggunakan teknik **tipuan** yang sederhana. Walaupun script ini memperlihatkan proses enkripsi yang terlihat lebih rumit, sebenarnya data yang diproses tidak benar-benar terenkripsi.
+Selamat datang di repositori **Script Enkripsi Bash**! 💻  
+Dengan **dua teknik enkripsi** yang **unik dan penuh tipuan**, Anda akan diajak untuk mengeksplorasi dunia **enkripsi visual** yang mengesankan. 🧐
 
-## Fitur Utama
+---
 
-- **Enkripsi Tingkat Hard**: Teknik yang terlihat lebih rumit, namun sebenarnya hanya manipulasi tampilan.
-- **Enkripsi Tingkat Easy**: Teknik yang lebih sederhana dengan tampilan yang lebih rumit dari yang sebenarnya.
-- **Menu Interaktif**: Pilihan opsi yang mudah digunakan dalam terminal.
-- **Efek Ketikan**: Menambahkan efek ketikan untuk pengalaman pengguna yang lebih menarik.
+## 📜 **Deskripsi**
+Script ini memberikan dua pilihan enkripsi:
+- **Enkripsi Tingkat Hard**: Terlihat sangat rumit dengan efek visual yang membuat tampilan jadi lebih elegan dan **tipuan** yang menyembunyikan proses sebenarnya.
+- **Enkripsi Tingkat Easy**: Lebih sederhana tetapi tetap menawarkan tampilan yang menciptakan kesan enkripsi yang kuat.
 
-## Penjelasan Teknik Enkripsi
+Tidak hanya itu, Anda juga bisa menikmati **menu interaktif** yang disertai dengan efek **typing** yang membuat setiap pilihan menu terasa lebih hidup.
 
-Script ini menggunakan dua metode enkripsi yang berbeda:
+## 🎮 **Tampilan Menu Interaktif**
+Berikut adalah **Tampilan Menu** yang dapat Anda pilih di terminal:
 
-### 1. Enkripsi Tingkat Hard
-Metode ini menyembunyikan operasi sebenarnya di balik proses yang tampak rumit. Meskipun terlihat seperti enkripsi yang kuat, data yang diproses sebenarnya tidak mengalami perubahan.
+### **Menu Utama**:
 
-### 2. Enkripsi Tingkat Easy
-Metode yang lebih sederhana namun tetap memberikan kesan seperti enkripsi yang rumit. Proses ini sangat cepat dan efisien, meskipun hasilnya tidak jauh berbeda dengan metode Hard.
+### **Demo Menu dalam GIF**:
+![Menu Demo](https://media.giphy.com/media/xUOxf59VSKYZjsO8kA/giphy.gif)
 
-## Cara Menggunakan
+> **Catatan**: GIF ini menggambarkan interaktivitas di terminal, seperti efek ketikan dan tampilan menu.
 
-1. Buka terminal di sistem Anda.
-2. Unduh dan jalankan script.
-3. Pilih salah satu opsi:
-   - Tekan **1** untuk Enkripsi Tingkat Hard.
-   - Tekan **2** untuk Enkripsi Tingkat Easy.
-   - Tekan **3** untuk keluar dari script.
-4. Ikuti petunjuk yang muncul sesuai dengan pilihan Anda.
+---
 
-## Contoh Kode
+## 💡 **Teknik Enkripsi**
+### **1. Enkripsi Tingkat Hard**
+- **Efek Visual**: Tipuan yang digunakan menciptakan kesan enkripsi yang sangat kompleks.
+- **Metode**: Sederhana, namun memberikan tampilan yang luar biasa rumit.
 
-Berikut adalah contoh kode yang digunakan dalam script:
+### **2. Enkripsi Tingkat Easy**
+- **Efek Visual**: Menggunakan manipulasi teks untuk memberi tampilan yang lebih sederhana tetapi tetap menarik.
+- **Metode**: Lebih langsung dan mudah dimengerti.
 
+---
+
+## 🚀 **Fitur**
+- **Menu Interaktif** dengan pilihan yang jelas dan mudah digunakan.
+- **Efek Ketikan**: Menciptakan efek mengetik pada setiap teks yang muncul di terminal, memberikan pengalaman yang lebih menyenangkan.
+- **Warna yang Menarik** untuk setiap bagian menu, membuat tampilan lebih hidup.
+- **Script yang Sederhana dan Cepat** namun tetap memberikan kesan “kompleks” dan elegan.
+
+---
+
+## 📝 **Cuplikan Kode**
+
+### 1. **Fungsi Efek Ketikan**
+Berikut adalah cuplikan kode dari bagian efek ketikan:
 ```bash
-#!/bin/bash
-
-# Warna untuk mempercantik tampilan
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-CYAN='\033[0;36m'
-RESET='\033[0m'
-
 # Fungsi efek ketikan
 typing_effect() {
     local str="$1"
@@ -55,12 +61,12 @@ typing_effect() {
 
 show_menu() {
     clear
-    echo -e "${CYAN}╭────────────────────────────────────────────────────────────────╮${RESET}"
+    echo -e "${CYAN}╭────────────────────────────────────────────────────────────╮${RESET}"
     echo -e "${CYAN}│${RESET} ${MAGENTA}≼════════════≽ ${YELLOW}Enkripsi Menu ${MAGENTA}≼════════════≽ ${CYAN}│${RESET}"
-    echo -e "${CYAN}├────────────────────────────────────────────────────────────────┤${RESET}"
+    echo -e "${CYAN}├────────────────────────────────────────────────────────────┤${RESET}"
     echo -e "${WHITE}│ ${CYAN}1.${WHITE} Enkripsi Tingkat Hard                ${CYAN}│${RESET}"
     echo -e "${WHITE}│ ${CYAN}2.${WHITE} Enkripsi Tingkat Easy                ${CYAN}│${RESET}"
     echo -e "${WHITE}│ ${RED}3.${WHITE} Keluar                               ${CYAN}│${RESET}"
-    echo -e "${CYAN}╰────────────────────────────────────────────────────────────────╯${RESET}"
+    echo -e "${CYAN}╰────────────────────────────────────────────────────────────╯${RESET}"
     echo -n -e "${CYAN}Pilih menu (1/2/3): ${RESET}"
 }
