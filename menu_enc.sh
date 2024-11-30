@@ -27,9 +27,10 @@ show_menu() {
     echo -e "${CYAN}╭────────────────────────────────────────────────────────────────╮${RESET}"
     echo -e "${CYAN}│${RESET} ${MAGENTA}≼════════════≽ ${YELLOW}Enkripsi Menu ${MAGENTA}≼════════════≽ ${CYAN}│${RESET}"
     echo -e "${CYAN}├────────────────────────────────────────────────────────────────┤${RESET}"
-    echo -e "${WHITE}│ ${CYAN}1.${WHITE} Enkripsi Tingkat Hard                ${CYAN}│${RESET}"
-    echo -e "${WHITE}│ ${CYAN}2.${WHITE} Enkripsi Tingkat Easy                ${CYAN}│${RESET}"
-    echo -e "${WHITE}│ ${RED}3.${WHITE} Keluar                               ${CYAN}│${RESET}"
+    echo -e "${WHITE}│ ${CYAN}1.${WHITE} Enkripsi script python v1                ${CYAN}│${RESET}"
+    echo -e "${WHITE}│ ${CYAN}2.${WHITE} Enkripsi script python v2                ${CYAN}│${RESET}"
+    echo -e "${WHITE}│ ${CYAN}3.${WHITE} Enkripsi script bash/shell               ${CYAN}│${RESET}"
+    echo -e "${WHITE}│ ${RED}4.${WHITE} Keluar                               ${CYAN}│${RESET}"
     echo -e "${CYAN}╰────────────────────────────────────────────────────────────────╯${RESET}"
     echo -n -e "${CYAN}Pilih menu (1/2/3): ${RESET}"
 }
@@ -41,19 +42,27 @@ while true; do
     case $choice in
         1)
             clear
-            echo -e "${CYAN}Memulai Enkripsi Tingkat Hard...${RESET}"
+            echo -e "${CYAN}Memulai Enkripsi script python...${RESET}"
             sleep 1
             chmod +x file1.sh
             ./file1.sh
             ;;
         2)
             clear
-            echo -e "${CYAN}Memulai Enkripsi Tingkat Easy...${RESET}"
+            echo -e "${CYAN}Memulai Enkripsi script python...${RESET}"
             sleep 1
             chmod +x file2.sh
             ./file2.sh
             ;;
-        3)
+         3)
+            clear
+            echo -e "${CYAN}Memulai Enkripsi script bash/shell...${RESET}"
+            sleep 1
+            chmod +x file3.sh
+            ./file3.sh
+            ;;
+            
+        4) 
             clear
             echo -e "${RED}Keluar dari script...${RESET}"
             sleep 1.5
