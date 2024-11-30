@@ -1,22 +1,24 @@
 #!/bin/bash
 
+# Menampilkan prompt untuk input lokasi file
+echo "Masukkan lokasi script yang akan dienkripsi (contoh: /sdcard/script.sh): "
+read INPUT_FILE
+
 # Pastikan file input tersedia
-if [[ -z $1 ]]; then
-  echo "Usage: $0 <file_to_encrypt>"
+if [[ -z $INPUT_FILE ]]; then
+  echo "Error: Tidak ada file yang diberikan."
   exit 1
 fi
 
-INPUT_FILE=$1
 OUTPUT_FILE="${INPUT_FILE%.*}_encrypted.sh"
 
 if [[ ! -f $INPUT_FILE ]]; then
-  echo "Error: File $INPUT_FILE not found."
+  echo "Error: File $INPUT_FILE tidak ditemukan."
   exit 1
 fi
 
-# Meminta password dari pengguna untuk enkripsi
-echo "Masukkan nama pengguna script untuk enkripsi: "
-read -s Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript
+# Gunakan password tetap untuk enkripsi (disesuaikan dengan kebutuhan)
+Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript="YourSecurePassword"  # Ganti dengan password yang lebih kuat jika perlu
 
 # Enkripsi file menggunakan AES-256-CBC
 ENCRYPTED_CONTENT=$(openssl enc -aes-256-cbc -salt -pbkdf2 -pass pass:$Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript -in "$INPUT_FILE" | base64 | tr -d '\n')
@@ -25,7 +27,7 @@ ENCRYPTED_CONTENT=$(openssl enc -aes-256-cbc -salt -pbkdf2 -pass pass:$Request_N
 cat << EOF > "$OUTPUT_FILE"
 #!/bin/bash
 # Mendekripsi file secara otomatis menggunakan password enkripsi
-Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript="$Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript" # Gantilah variabel password sesuai kebutuhan. Bagian ini harus disesuaikan oleh pengguna.
+Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript="$Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript"  # Gunakan password yang sesuai
 PAYLOAD="\$ENCRYPTED_CONTENT"
 DECRYPTED_SCRIPT=\$(echo "\$PAYLOAD" | base64 -d | openssl enc -aes-256-cbc -d -pbkdf2 -pass pass:\$Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript 2>/dev/null)
 
