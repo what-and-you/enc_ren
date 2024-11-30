@@ -25,8 +25,8 @@ ENCRYPTED_CONTENT=$(openssl enc -aes-256-cbc -salt -pbkdf2 -pass pass:$Request_N
 cat << EOF > "$OUTPUT_FILE"
 #!/bin/bash
 # Mendekripsi file secara otomatis menggunakan password enkripsi
-Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript="$Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript" #yang bagian lu hapus karena bisa menyebabkan error!!!
-PAYLOAD="$ENCRYPTED_CONTENT"
+Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript="$Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript" # Gantilah variabel password sesuai kebutuhan. Bagian ini harus disesuaikan oleh pengguna.
+PAYLOAD="\$ENCRYPTED_CONTENT"
 DECRYPTED_SCRIPT=\$(echo "\$PAYLOAD" | base64 -d | openssl enc -aes-256-cbc -d -pbkdf2 -pass pass:\$Request_Nama_Panggilan_pengguna_yang_sudah_melakukan_encript 2>/dev/null)
 
 if [[ -z "\$DECRYPTED_SCRIPT" ]]; then
