@@ -21,15 +21,17 @@ typing_effect() {
     echo
 }
 
-
+# Fungsi untuk menampilkan menu dengan desain yang lebih keren
 show_menu() {
     clear
-    echo -e "${CYAN}╭─────────────────────────≼ Enkripsi Menu ≽─────────────────────────╮${RESET}"
-    echo -e "${WHITE}1.${CYAN} Enkripsi Tingkat Hard"
-    echo -e "${WHITE}2.${CYAN} Enkripsi Tingkat Easy"
-    echo -e "${WHITE}3.${RED} Keluar"
+    echo -e "${CYAN}╭────────────────────────────────────────────────────────────────╮${RESET}"
+    echo -e "${CYAN}│${RESET} ${MAGENTA}≼════════════≽ ${YELLOW}Enkripsi Menu ${MAGENTA}≼════════════≽ ${CYAN}│${RESET}"
+    echo -e "${CYAN}├────────────────────────────────────────────────────────────────┤${RESET}"
+    echo -e "${WHITE}│ ${CYAN}1.${WHITE} Enkripsi Tingkat Hard                ${CYAN}│${RESET}"
+    echo -e "${WHITE}│ ${CYAN}2.${WHITE} Enkripsi Tingkat Easy                ${CYAN}│${RESET}"
+    echo -e "${WHITE}│ ${RED}3.${WHITE} Keluar                               ${CYAN}│${RESET}"
     echo -e "${CYAN}╰────────────────────────────────────────────────────────────────╯${RESET}"
-    echo -n -e "${CYAN}Pilih menu: ${RESET} "
+    echo -n -e "${CYAN}Pilih menu (1/2/3): ${RESET}"
 }
 
 # Menu utama
@@ -38,19 +40,27 @@ while true; do
     read -r choice
     case $choice in
         1)
+            clear
+            echo -e "${CYAN}Memulai Enkripsi Tingkat Hard...${RESET}"
+            sleep 1
             chmod +x enc_ren.sh
             ./enc_ren.sh
             ;;
         2)
+            clear
+            echo -e "${CYAN}Memulai Enkripsi Tingkat Easy...${RESET}"
+            sleep 1
             chmod +x enc_ren2.sh
             ./enc_ren2.sh
             ;;
         3)
+            clear
             echo -e "${RED}Keluar dari script...${RESET}"
             sleep 1.5
             break
             ;;
         *)
+            clear
             echo -e "${RED}Pilihan tidak valid, coba lagi.${RESET}"
             read -p "Tekan enter untuk kembali ke menu awal."
             ;;
