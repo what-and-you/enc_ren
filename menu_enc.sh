@@ -38,7 +38,7 @@ while true; do
     read -r choice
     case $choice in
         1)
-            chmod +x enc_ren1.sh
+            chmod +x enc_ren.sh
             ./enc_ren.sh
             ;;
         2)
