@@ -59,8 +59,9 @@ while true; do
             echo -e "${CYAN}Memulai Enkripsi script bash/shell...${RESET}"
             sleep 1
             chmod +x file3.sh
-            read -p "contoh penggunaan: /sdcard/contoh/p/nama_file.sh"
+            read -p "contoh penggunaan: /sdcard/contoh/p/nama_file.sh: "
             ./file3.sh
+            read -p""
             ;;
             
         4) 
