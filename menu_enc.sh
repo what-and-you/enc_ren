@@ -46,36 +46,35 @@ while true; do
             echo -e "${CYAN}Memulai Enkripsi script python...${RESET}"
             sleep 1
             chmod +x file1.sh
-            ./file1.sh
+            ./file1.sh || echo -e "${RED}Error: file1.sh tidak ditemukan atau gagal dieksekusi!${RESET}"
             ;;
         2)
             clear
             echo -e "${CYAN}Memulai Enkripsi script python...${RESET}"
             sleep 1
             chmod +x file2.sh
-            ./file2.sh
+            ./file2.sh || echo -e "${RED}Error: file2.sh tidak ditemukan atau gagal dieksekusi!${RESET}"
             ;;
-         3)
+        3)
             clear
             echo -e "${CYAN}Memulai Enkripsi script bash/shell...${RESET}"
             sleep 1
             chmod +x file3.sh
-            ./file3.sh
+            ./file3.sh || echo -e "${RED}Error: file3.sh tidak ditemukan atau gagal dieksekusi!${RESET}"
             ;;
-            
-            4) 
+        4)
             clear
-            echo -p "installasi sedang di mulai di katae belakang!!! "
-            chmid +x module.py
-            ./module.py
+            echo "Installasi sedang dimulai di latar belakang!"
+            sleep 1
+            chmod +x module.py
+            ./module.py || echo -e "${RED}Error: module.py tidak ditemukan atau gagal dieksekusi!${RESET}"
             ;;
-        5) 
+        5)
             clear
             echo -e "${RED}Keluar dari script...${RESET}"
             sleep 1.5
             break
             ;;
-            
         *)
             clear
             echo -e "${RED}Pilihan tidak valid, coba lagi.${RESET}"
