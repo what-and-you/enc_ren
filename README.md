@@ -1,11 +1,11 @@
-# penting! untuk menginstall bahan dulu sebelum memakai script encript nya!!!# 
+# *penting! untuk menginstall bahan dulu sebelum memakai script encript nya!!!*# 
 ```
 cd enc_ren
 ```
 ```
 python module.py
 ```
-# habis itu tunggu saja sampai selesai mungkin membutuh kan banyak waktu untuk menginstall bahan nya, apabila sc nya tidak berjalan silahkan pakai script nya ulang!!! 😉
+# *habis itu tunggu saja sampai selesai mungkin membutuh kan banyak waktu untuk menginstall bahan nya, apabila sc nya tidak berjalan silahkan pakai script nya ulang!!!😉*
 
 # 🚀 **Script Enkripsi Bash** - Sederhana, Kreatif, dan Efektif! 🔒
 
