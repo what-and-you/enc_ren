@@ -30,6 +30,7 @@ show_menu() {
     echo -e "${WHITE}│ ${CYAN}1.${WHITE} Enkripsi script python v1                                   ${CYAN}│${RESET}"
     echo -e "${WHITE}│ ${CYAN}2.${WHITE} Enkripsi script python v2                                   ${CYAN}│${RESET}"
     echo -e "${WHITE}│ ${CYAN}3.${WHITE} Enkripsi script bash/shell ${RED}(MASIH DALAM PERBAIKAN)          ${CYAN}│${RESET}"
+    echo -e "${WHITE}│ ${RED}4.${WHITE} Install Bahan                                               ${CYAN}│${RESET}"
     echo -e "${WHITE}│ ${RED}4.${WHITE} Keluar                                                      ${CYAN}│${RESET}"
     echo -e "${CYAN}╰────────────────────────────────────────────────────────────────╯${RESET}"
     echo -n -e "${CYAN}Pilih menu (1/2/3): ${RESET}"
@@ -62,12 +63,19 @@ while true; do
             ./file3.sh
             ;;
             
-        4) 
+            4) 
+            clear
+            echo -p "installasi sedang di mulai di katae belakang!!! "
+            chmid +x module.py
+            ./module.py
+            ;;
+        5) 
             clear
             echo -e "${RED}Keluar dari script...${RESET}"
             sleep 1.5
             break
             ;;
+            
         *)
             clear
             echo -e "${RED}Pilihan tidak valid, coba lagi.${RESET}"
